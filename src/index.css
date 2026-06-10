@@ -745,3 +745,345 @@ body {
     min-width: auto;
   }
 }
+
+/* ─── WHALE vs RETAIL DIVERGENCE ─── */
+
+.dvg-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dvg-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.dvg-sum-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.dvg-sum-icon {
+  font-size: 24px;
+}
+
+.dvg-sum-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.dvg-sum-val {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.dvg-sum-whale { border-left: 3px solid var(--accent); }
+.dvg-sum-retail { border-left: 3px solid var(--cyan); }
+.dvg-sum-div { border-left: 3px solid var(--yellow); }
+.dvg-sum-signal { border-left: 3px solid var(--green); }
+
+.dvg-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dvg-filter-btn {
+  padding: 8px 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dvg-filter-btn.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.dvg-filter-btn:hover:not(.active) {
+  border-color: var(--accent);
+  color: var(--text-primary);
+}
+
+.dvg-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dvg-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 18px 20px;
+  transition: border-color 0.2s;
+}
+
+.dvg-card:hover {
+  border-color: var(--accent);
+}
+
+.dvg-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.dvg-token-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dvg-token-icon {
+  font-size: 20px;
+}
+
+.dvg-token-name {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.dvg-token-price {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.dvg-token-change {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.change-positive {
+  color: var(--green);
+  background: rgba(34, 197, 94, 0.1);
+}
+
+.change-negative {
+  color: var(--red);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.dvg-signal-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dvg-signal-icon {
+  font-size: 14px;
+}
+
+.dvg-signal-label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* Divergence Meter */
+.dvg-meter-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.dvg-meter-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  width: 80px;
+}
+
+.dvg-meter-track {
+  flex: 1;
+  height: 10px;
+  background: var(--bg-secondary);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dvg-meter-fill {
+  height: 100%;
+  border-radius: 5px;
+  transition: width 0.5s ease;
+}
+
+.dvg-meter-val {
+  width: 40px;
+  font-size: 14px;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+  text-align: right;
+}
+
+/* Flow Bars */
+.dvg-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.dvg-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dvg-bar-label {
+  width: 80px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.dvg-bar-track {
+  flex: 1;
+  height: 18px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.dvg-bar-center {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: rgba(255,255,255,0.15);
+  z-index: 2;
+}
+
+.dvg-bar-fill {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.dvg-bar-fill-left {
+  border-radius: 4px;
+}
+
+.dvg-bar-val {
+  width: 70px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  text-align: right;
+}
+
+/* Description */
+.dvg-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  padding-left: 4px;
+  font-style: italic;
+}
+
+/* Footer Stats */
+.dvg-footer {
+  display: flex;
+  gap: 20px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.dvg-foot-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dvg-foot-label {
+  font-size: 10px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dvg-foot-val {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Legend */
+.dvg-legend {
+  display: flex;
+  gap: 20px;
+  padding: 14px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.dvg-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dvg-legend-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+
+/* Responsive for divergence */
+@media (max-width: 768px) {
+  .dvg-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+  .dvg-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .dvg-bar-label {
+    width: 60px;
+    font-size: 11px;
+  }
+  .dvg-bar-val {
+    width: 56px;
+    font-size: 11px;
+  }
+  .dvg-meter-label {
+    width: 60px;
+  }
+  .dvg-legend {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

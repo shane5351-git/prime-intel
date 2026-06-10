@@ -1,3 +1,4 @@
+import DivergenceChart from './DivergenceChart.jsx'
 import { useState, useEffect, useCallback } from 'react'
 
 const WHALE_NAMES = [
@@ -582,14 +583,15 @@ export default function App() {
       <SearchBar onSearch={handleSearch} />
       <StatsRow feed={feed} />
       <div className="tabs">
-        {['feed', 'topwhales', 'watchlist', 'tokens'].map((t) => (
+        {['feed', 'topwhales', 'divergence', 'watchlist', 'tokens'].map((t) => (
           <button key={t} className={'tab ' + (tab === t ? 'active' : '')} onClick={() => setTab(t)}>
-            {t === 'feed' ? '🐋 Whale Feed' : t === 'topwhales' ? '🏆 Top Whales' : t === 'watchlist' ? '👁️ Watchlist' : '📊 Base Tokens'}
+            {t === 'feed' ? '🐋 Whale Feed' : t === 'topwhales' ? '🏆 Top Whales' : t === 'divergence' ? '⚡ Divergence' : t === 'watchlist' ? '👁️ Watchlist' : '📊 Base Tokens'}
           </button>
         ))}
       </div>
       {tab === 'feed' && <WhaleFeed feed={feed} />}
       {tab === 'topwhales' && <TopWhales whales={TOP_WHALES} />}
+      {tab === 'divergence' && <DivergenceChart />}
       {tab === 'watchlist' && <Watchlist wallets={watchlist} onRemove={handleRemoveWatchlist} />}
       {tab === 'tokens' && <TokensTab tokens={tokens} loading={tokensLoading} error={tokensError} />}
     </div>
