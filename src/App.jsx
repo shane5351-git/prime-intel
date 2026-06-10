@@ -1,8 +1,10 @@
+import HomeChat from './HomeChat';
 import { useState, useEffect, useCallback } from 'react';
 import DivergenceChart from './DivergenceChart';
 import WalletTab from './WalletTab';
 
 const TABS = [
+  { id: 'home', label: 'Home' },
   { id: 'feed', label: 'Feed' },
   { id: 'whales', label: 'Top Whales' },
   { id: 'divergence', label: 'Divergence' },
@@ -61,7 +63,7 @@ function fmtAddr(addr) {
 }
 
 export default function App() {
-  const [tab, setTab] = useState('feed');
+  const [tab, setTab] = useState('home');
   const [whaleFeed, setWhaleFeed] = useState([]);
   const [watchlist, setWatchlist] = useState([]);
   const [searchAddr, setSearchAddr] = useState('');
@@ -117,7 +119,7 @@ export default function App() {
         <nav className="sidebar-nav">
           {TABS.map(t => (
             <button key={t.id} className={'nav-item' + (tab === t.id ? ' active' : '')} onClick={() => setTab(t.id)}>
-              <span className="nav-icon">{t.id === 'feed' ? 'F' : t.id === 'whales' ? 'W' : t.id === 'divergence' ? 'D' : t.id === 'tokens' ? 'T' : t.id === 'watchlist' ? 'S' : 'C'}</span>
+              <span className="nav-icon">{t.id === 'home' ? 'H' : t.id === 'feed' ? 'F' : t.id === 'whales' ? 'W' : t.id === 'divergence' ? 'D' : t.id === 'tokens' ? 'T' : t.id === 'watchlist' ? 'S' : 'C'}</span>
               {t.label}
             </button>
           ))}
@@ -131,7 +133,7 @@ export default function App() {
       </aside>
 
       <main className="main">
-        <div className="main-header">
+        <div className={'main-header' + (tab === 'home' ? ' home-hidden' : '')}>
           <h1 className="page-title">{TABS.find(t => t.id === tab)?.label}</h1>
           {(tab === 'feed' || tab === 'watchlist') && (
             <div className="search-bar">
@@ -269,6 +271,7 @@ export default function App() {
           </>
         )}
 
+        {tab === 'home' && <HomeChat />}
         {tab === 'wallet' && <WalletTab />}
       </main>
     </div>
