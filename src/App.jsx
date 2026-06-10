@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback } from 'react';
 import DivergenceChart from './DivergenceChart';
 import WalletTab from './WalletTab';
 import SentimentTab from './SentimentTab';
+import SocialTab from './SocialTab';
 
 
 const NavIcon = ({ id }) => {
@@ -15,6 +16,7 @@ const NavIcon = ({ id }) => {
     watchlist: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>,
     wallet: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M16 12h.01"/><path d="M2 10h20"/></svg>,
     sentiment: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>,
+    social: <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>,
   };
   return icons[id] || null;
 };
@@ -28,6 +30,7 @@ const TABS = [
   { id: 'watchlist', label: 'Watchlist' },
   { id: 'sentiment', label: 'Sentiment' },
   { id: 'wallet', label: 'Wallet' },
+  { id: 'social', label: 'Social' },
 ];
 
 const WHALE_NAMES = [
@@ -291,6 +294,7 @@ export default function App() {
         {tab === 'home' && <HomeChat />}
         {tab === 'sentiment' && <SentimentTab />}
         {tab === 'wallet' && <WalletTab />}
+        {tab === 'social' && <SocialTab />}
       </main>
     </div>
   );
