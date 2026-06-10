@@ -1,5 +1,6 @@
-import './social-tab.css';
-import { useState, useEffect, useRef } from 'react';
+const fs = require('fs');
+
+const jsx = `import { useState, useEffect, useRef } from 'react';
 
 const ALPHA_CALLERS = [
   {
@@ -297,7 +298,7 @@ export default function SocialTab() {
   };
 
   const SortArrow = ({ col }) => (
-    <span className="sort-arrow">{sortKey === col ? (sortDir === 'asc' ? ' ↑' : ' ↓') : ''}</span>
+    <span className="sort-arrow">{sortKey === col ? (sortDir === 'asc' ? ' \u2191' : ' \u2193') : ''}</span>
   );
 
   const renderCallTable = (calls) => (
@@ -446,3 +447,7 @@ export default function SocialTab() {
     </div>
   );
 }
+`;
+
+fs.writeFileSync('/home/node/.openclaw/workspace/prime-intel/src/SocialTab.jsx', jsx);
+console.log('SocialTab.jsx written');
