@@ -498,3 +498,250 @@ body {
   .whale-profile { grid-template-columns: 1fr; }
   .search-bar { flex-direction: column; }
 }
+
+/* Top Whales Leaderboard */
+.top-whales {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.top-whale-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.top-whale-card:hover {
+  border-color: var(--accent);
+}
+
+.top-whale-card.expanded {
+  border-color: var(--accent);
+}
+
+.top-whale-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  cursor: pointer;
+}
+
+.top-whale-rank {
+  width: 36px;
+  text-align: center;
+}
+
+.rank-num {
+  font-size: 16px;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-secondary);
+}
+
+.top-whale-main .whale-avatar {
+  flex-shrink: 0;
+}
+
+.top-whale-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.top-whale-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.top-whale-ens {
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.streak-badge {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.streak-win {
+  background: rgba(34, 197, 94, 0.15);
+  color: var(--green);
+}
+
+.streak-loss {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--red);
+}
+
+.top-whale-addr {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.top-whale-portfolio {
+  text-align: right;
+  min-width: 130px;
+}
+
+.portfolio-val {
+  font-size: 16px;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.pnl-val {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.top-whale-meta {
+  display: flex;
+  gap: 16px;
+  min-width: 160px;
+}
+
+.meta-item {
+  text-align: center;
+}
+
+.meta-label {
+  display: block;
+  font-size: 10px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.meta-val {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.copy-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.copy-btn:hover {
+  border-color: var(--accent);
+  background: var(--bg-card-hover);
+}
+
+/* Expanded whale card */
+.top-whale-expand {
+  padding: 0 18px 16px;
+  border-top: 1px solid var(--border);
+  margin-top: 0;
+  padding-top: 16px;
+}
+
+.holdings-section {
+  margin-bottom: 12px;
+}
+
+.holdings-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.holdings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.holding-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.holding-token {
+  width: 60px;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.holding-bar-bg {
+  flex: 1;
+  height: 8px;
+  background: var(--bg-secondary);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.holding-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), #a855f7);
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+
+.holding-pct {
+  width: 36px;
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+.expand-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.basescan-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.basescan-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .top-whale-main {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .top-whale-portfolio {
+    order: -1;
+    width: 100%;
+    text-align: left;
+    margin-left: 50px;
+  }
+  .top-whale-meta {
+    min-width: auto;
+  }
+}

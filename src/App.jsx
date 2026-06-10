@@ -18,6 +18,159 @@ const WHALE_NAMES = [
   { name: 'YieldFarmer_X', tier: 'dolphin', avatar: '🌾' },
 ]
 
+const TOP_WHALES = [
+  {
+    rank: 1,
+    address: '0x742d35Cc6634C0532925a3b844Bc9e7595f2bD08',
+    ens: 'gigabrain.eth',
+    tier: 'mega',
+    avatar: '🐋',
+    portfolio: 48750000,
+    pnl24h: 2340000,
+    pnlPct: 5.05,
+    winRate: 78,
+    txCount: 12847,
+    topHoldings: ['ETH 40%', 'USDC 25%', 'cbETH 15%', 'AERO 10%', 'VIRTUAL 10%'],
+    lastActive: '2m ago',
+    streak: 'W5',
+  },
+  {
+    rank: 2,
+    address: '0x8Ba1f109551bD432803012645Ac136ddd64DBA72',
+    ens: 'defi_whale.base',
+    tier: 'mega',
+    avatar: '🟣',
+    portfolio: 31200000,
+    pnl24h: -890000,
+    pnlPct: -2.78,
+    winRate: 72,
+    txCount: 9341,
+    topHoldings: ['ETH 35%', 'WEETH 20%', 'rETH 20%', 'AERO 15%', 'UNI 10%'],
+    lastActive: '8m ago',
+    streak: 'L2',
+  },
+  {
+    rank: 3,
+    address: '0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045',
+    ens: 'vitalik.eth',
+    tier: 'mega',
+    avatar: '🔷',
+    portfolio: 28400000,
+    pnl24h: 1120000,
+    pnlPct: 4.11,
+    winRate: 91,
+    txCount: 45230,
+    topHoldings: ['ETH 60%', 'USDC 15%', 'UNI 10%', 'Aave 10%', 'DAI 5%'],
+    lastActive: '14m ago',
+    streak: 'W12',
+  },
+  {
+    rank: 4,
+    address: '0x3fC91A3afd6f62868aB0F74d2e1E7b3B6Cf0A5e0',
+    ens: null,
+    tier: 'whale',
+    avatar: '👑',
+    portfolio: 9750000,
+    pnl24h: 432000,
+    pnlPct: 4.64,
+    winRate: 68,
+    txCount: 6821,
+    topHoldings: ['VIRTUAL 30%', 'CLANKER 25%', 'BRETT 20%', 'AERO 15%', 'ETH 10%'],
+    lastActive: '1m ago',
+    streak: 'W3',
+  },
+  {
+    rank: 5,
+    address: '0x56Eddb7C5a92B0C3E9c2a20A8F7eF2Dc0E4B3e8F',
+    ens: 'aerodrome.eth',
+    tier: 'whale',
+    avatar: '🌊',
+    portfolio: 8200000,
+    pnl24h: -210000,
+    pnlPct: -2.50,
+    winRate: 65,
+    txCount: 5120,
+    topHoldings: ['AERO 35%', 'ETH 25%', 'USDC 20%', 'cbETH 10%', 'DAI 10%'],
+    lastActive: '5m ago',
+    streak: 'L1',
+  },
+  {
+    rank: 6,
+    address: '0x1DB3479A8e23C29B0F6eF4a6fF3A5c17e8B8a1C2',
+    ens: 'smartcontractking.base',
+    tier: 'whale',
+    avatar: '⚡',
+    portfolio: 6100000,
+    pnl24h: 187000,
+    pnlPct: 3.17,
+    winRate: 71,
+    txCount: 4210,
+    topHoldings: ['ETH 45%', 'USDC 20%', 'WEETH 15%', 'DEGEN 10%', 'BRETT 10%'],
+    lastActive: '22m ago',
+    streak: 'W7',
+  },
+  {
+    rank: 7,
+    address: '0xA1b2C3d4E5f6A7b8C9d0E1f2A3b4C5d6E7f8A9b0',
+    ens: 'darkpool.eth',
+    tier: 'whale',
+    avatar: '🌑',
+    portfolio: 4500000,
+    pnl24h: -67000,
+    pnlPct: -1.47,
+    winRate: 62,
+    txCount: 3890,
+    topHoldings: ['USDC 30%', 'ETH 25%', 'AERO 20%', 'VIRTUAL 15%', 'UNI 10%'],
+    lastActive: '45m ago',
+    streak: 'L3',
+  },
+  {
+    rank: 8,
+    address: '0xBb0E1c3a7d0F9E4C8b2A6D1c3E5f7A9b1D3e5F7a',
+    ens: null,
+    tier: 'whale',
+    avatar: '🌉',
+    portfolio: 3200000,
+    pnl24h: 98000,
+    pnlPct: 3.16,
+    winRate: 69,
+    txCount: 2940,
+    topHoldings: ['cbETH 30%', 'ETH 25%', 'rETH 20%', 'Aave 15%', 'DAI 10%'],
+    lastActive: '3m ago',
+    streak: 'W2',
+  },
+  {
+    rank: 9,
+    address: '0xCc1D2e3F4a5B6c7D8e9F0a1B2c3D4e5F6a7B8c9D',
+    ens: 'alphaseeker.eth',
+    tier: 'dolphin',
+    avatar: '🎯',
+    portfolio: 1850000,
+    pnl24h: 56000,
+    pnlPct: 3.12,
+    winRate: 64,
+    txCount: 1820,
+    topHoldings: ['VIRTUAL 25%', 'CLANKER 25%', 'BRETT 20%', 'DEGEN 20%', 'ETH 10%'],
+    lastActive: '7m ago',
+    streak: 'W4',
+  },
+  {
+    rank: 10,
+    address: '0xDd2E3f4A5b6C7d8E9f0A1b2C3d4E5f6A7b8C9d0E',
+    ens: 'megavault.base',
+    tier: 'dolphin',
+    avatar: '🏦',
+    portfolio: 1420000,
+    pnl24h: -23000,
+    pnlPct: -1.59,
+    winRate: 58,
+    txCount: 1540,
+    topHoldings: ['ETH 35%', 'AERO 25%', 'USDC 20%', 'WEETH 10%', 'UNI 10%'],
+    lastActive: '18m ago',
+    streak: 'L1',
+  },
+]
+
 const TOKENS = ['ETH', 'USDC', 'cbETH', 'WEETH', 'AERO', 'VIRTUAL', 'CLANKER', 'BRETT', 'DEGEN', 'USDbC', 'DAI', 'rETH', 'UNI', 'Aave']
 const ACTIONS = ['buy', 'sell', 'swap', 'transfer']
 
@@ -192,6 +345,97 @@ function WhaleFeed({ feed }) {
   )
 }
 
+function TopWhales({ whales }) {
+  const [copiedIdx, setCopiedIdx] = useState(null)
+  const [expandedIdx, setExpandedIdx] = useState(null)
+
+  const handleCopy = (addr, idx) => {
+    navigator.clipboard.writeText(addr).catch(() => {})
+    setCopiedIdx(idx)
+    setTimeout(() => setCopiedIdx(null), 1500)
+  }
+
+  const toggleExpand = (idx) => {
+    setExpandedIdx(expandedIdx === idx ? null : idx)
+  }
+
+  const formatValue = (n) => {
+    if (n >= 1e6) return '$' + (n / 1e6).toFixed(2) + 'M'
+    if (n >= 1e3) return '$' + (n / 1e3).toFixed(0) + 'K'
+    return '$' + n.toLocaleString()
+  }
+
+  return (
+    <div className="top-whales">
+      {whales.map((w, i) => (
+        <div key={i} className={'top-whale-card' + (expandedIdx === i ? ' expanded' : '')}>
+          <div className="top-whale-main" onClick={() => toggleExpand(i)}>
+            <div className="top-whale-rank">
+              <span className="rank-num">#{w.rank}</span>
+            </div>
+            <div className={'whale-avatar ' + (w.tier === 'mega' ? 'diamond' : w.tier === 'whale' ? 'gold' : 'silver')}>
+              {w.avatar}
+            </div>
+            <div className="top-whale-info">
+              <div className="top-whale-name-row">
+                <span className="top-whale-ens">{w.ens || w.address.slice(0, 8) + '...'}</span>
+                <span className={'whale-tier tier-' + w.tier}>{w.tier}</span>
+                <span className={'streak-badge ' + (w.streak.startsWith('W') ? 'streak-win' : 'streak-loss')}>{w.streak}</span>
+              </div>
+              <div className="top-whale-addr">{w.address.slice(0, 6) + '...' + w.address.slice(-4)}</div>
+            </div>
+            <div className="top-whale-portfolio">
+              <div className="portfolio-val">{formatValue(w.portfolio)}</div>
+              <div className={'pnl-val ' + (w.pnl24h >= 0 ? 'value-positive' : 'value-negative')}>
+                {w.pnl24h >= 0 ? '+' : ''}{formatValue(Math.abs(w.pnl24h))} ({w.pnlPct >= 0 ? '+' : ''}{w.pnlPct.toFixed(2)}%)
+              </div>
+            </div>
+            <div className="top-whale-meta">
+              <div className="meta-item">
+                <span className="meta-label">Win</span>
+                <span className="meta-val" style={{ color: w.winRate >= 70 ? 'var(--green)' : w.winRate >= 60 ? 'var(--yellow)' : 'var(--red)' }}>{w.winRate}%</span>
+              </div>
+              <div className="meta-item">
+                <span className="meta-label">Txns</span>
+                <span className="meta-val">{w.txCount.toLocaleString()}</span>
+              </div>
+              <div className="meta-item">
+                <span className="meta-label">Last</span>
+                <span className="meta-val">{w.lastActive}</span>
+              </div>
+            </div>
+            <button className="copy-btn" onClick={(e) => { e.stopPropagation(); handleCopy(w.address, i) }} title="Copy address">
+              {copiedIdx === i ? '✓' : '📋'}
+            </button>
+          </div>
+          {expandedIdx === i && (
+            <div className="top-whale-expand">
+              <div className="holdings-section">
+                <div className="holdings-title">Top Holdings</div>
+                <div className="holdings-list">
+                  {w.topHoldings.map((h, j) => (
+                    <div key={j} className="holding-item">
+                      <span className="holding-token">{h.split(' ')[0]}</span>
+                      <div className="holding-bar-bg">
+                        <div className="holding-bar" style={{ width: parseInt(h) + '%' }} />
+                      </div>
+                      <span className="holding-pct">{h.split(' ')[1]}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="expand-meta-row">
+                <span className="mono">Full: {w.address}</span>
+                <a className="basescan-link" href={'https://basescan.org/address/' + w.address} target="_blank" rel="noopener noreferrer">View on BaseScan ↗</a>
+              </div>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  )
+}
+
 function Watchlist({ wallets, onRemove }) {
   if (!wallets.length) {
     return (
@@ -338,13 +582,14 @@ export default function App() {
       <SearchBar onSearch={handleSearch} />
       <StatsRow feed={feed} />
       <div className="tabs">
-        {['feed', 'watchlist', 'tokens'].map((t) => (
+        {['feed', 'topwhales', 'watchlist', 'tokens'].map((t) => (
           <button key={t} className={'tab ' + (tab === t ? 'active' : '')} onClick={() => setTab(t)}>
-            {t === 'feed' ? '🐋 Whale Feed' : t === 'watchlist' ? '👁️ Watchlist' : '📊 Base Tokens'}
+            {t === 'feed' ? '🐋 Whale Feed' : t === 'topwhales' ? '🏆 Top Whales' : t === 'watchlist' ? '👁️ Watchlist' : '📊 Base Tokens'}
           </button>
         ))}
       </div>
       {tab === 'feed' && <WhaleFeed feed={feed} />}
+      {tab === 'topwhales' && <TopWhales whales={TOP_WHALES} />}
       {tab === 'watchlist' && <Watchlist wallets={watchlist} onRemove={handleRemoveWatchlist} />}
       {tab === 'tokens' && <TokensTab tokens={tokens} loading={tokensLoading} error={tokensError} />}
     </div>
