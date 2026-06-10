@@ -1,4 +1,5 @@
 import DivergenceChart from './DivergenceChart.jsx'
+import WalletTab from './WalletTab.jsx'
 import { useState, useEffect, useCallback } from 'react'
 
 const WHALE_NAMES = [
@@ -536,6 +537,10 @@ export default function App() {
   const [tokens, setTokens] = useState(null)
   const [tokensLoading, setTokensLoading] = useState(false)
   const [tokensError, setTokensError] = useState(null)
+  const [walletAddress, setWalletAddress] = useState(null)
+  const [walletConnected, setWalletConnected] = useState(false)
+  const handleWalletConnect = (addr) => { setWalletAddress(addr); setWalletConnected(true) }
+  const handleWalletDisconnect = () => { setWalletAddress(null); setWalletConnected(false) }
 
   useEffect(() => {
     const initial = WHALE_NAMES.slice(0, 8).map((name) => generateWhaleAction(name))
@@ -583,15 +588,16 @@ export default function App() {
       <SearchBar onSearch={handleSearch} />
       <StatsRow feed={feed} />
       <div className="tabs">
-        {['feed', 'topwhales', 'divergence', 'watchlist', 'tokens'].map((t) => (
+        {['feed', 'topwhales', 'divergence', 'wallet', 'watchlist', 'tokens'].map((t) => (
           <button key={t} className={'tab ' + (tab === t ? 'active' : '')} onClick={() => setTab(t)}>
-            {t === 'feed' ? '🐋 Whale Feed' : t === 'topwhales' ? '🏆 Top Whales' : t === 'divergence' ? '⚡ Divergence' : t === 'watchlist' ? '👁️ Watchlist' : '📊 Base Tokens'}
+            {t === 'feed' ? '🐋 Whale Feed' : t === 'topwhales' ? '🏆 Top Whales' : t === 'divergence' ? '⚡ Divergence' : t === 'wallet' ? '🔗 Wallet' : t === 'watchlist' ? '👁️ Watchlist' : '📊 Base Tokens'}
           </button>
         ))}
       </div>
       {tab === 'feed' && <WhaleFeed feed={feed} />}
       {tab === 'topwhales' && <TopWhales whales={TOP_WHALES} />}
       {tab === 'divergence' && <DivergenceChart />}
+      {tab === 'wallet' && <WalletTab address={walletAddress} isConnected={walletConnected} onConnect={handleWalletConnect} onDisconnect={handleWalletDisconnect} />}
       {tab === 'watchlist' && <Watchlist wallets={watchlist} onRemove={handleRemoveWatchlist} />}
       {tab === 'tokens' && <TokensTab tokens={tokens} loading={tokensLoading} error={tokensError} />}
     </div>
