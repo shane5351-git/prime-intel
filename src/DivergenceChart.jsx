@@ -1,12 +1,12 @@
 import { useState, useMemo } from 'react';
 
 const DIVERGENCE_DATA = [
-  { token: 'VIRTUAL', price: 1.24, change24h: 8.2, whaleFlow: 4200000, retailFlow: -1800000, divergence: 94, signal: 'STRONG BUY', whaleTxs: 47, retailTxs: 312, desc: 'Whales accumulating heavily while retail exits. Strong smart money signal.' },
-  { token: 'CLANKER', price: 0.089, change24h: 5.1, whaleFlow: 2800000, retailFlow: -950000, divergence: 91, signal: 'STRONG BUY', whaleTxs: 31, retailTxs: 198, desc: 'Consistent whale accumulation over 48h. Retail capitulation creating entry.' },
-  { token: 'AERO', price: 1.87, change24h: 3.4, whaleFlow: 1900000, retailFlow: -420000, divergence: 82, signal: 'BUY', whaleTxs: 28, retailTxs: 156, desc: 'Moderate whale buying pressure. Retail showing signs of fatigue.' },
-  { token: 'ETH', price: 3847.21, change24h: 1.2, whaleFlow: 1200000, retailFlow: 680000, divergence: 38, signal: 'NEUTRAL', whaleTxs: 89, retailTxs: 4210, desc: 'Both whale and retail aligned. No significant divergence detected.' },
-  { token: 'BRETT', price: 0.034, change24h: -2.8, whaleFlow: -890000, retailFlow: 1200000, divergence: 72, signal: 'SELL', whaleTxs: 15, retailTxs: 287, desc: 'Whales reducing positions. Retail FOMO buying into distribution.' },
-  { token: 'DEGEN', price: 0.012, change24h: -5.4, whaleFlow: -2100000, retailFlow: 3400000, divergence: 86, signal: 'STRONG SELL', whaleTxs: 22, retailTxs: 892, desc: 'Massive retail pump while whales exit. Classic distribution pattern.' },
+  { token: 'VIRTUAL', price: 0.544, change24h: -3.2, whaleFlow: 4200000, retailFlow: -1800000, divergence: 94, signal: 'STRONG BUY', whaleTxs: 47, retailTxs: 312, desc: 'Whales accumulating heavily while retail exits. Strong smart money signal.' },
+  { token: 'CLANKER', price: 0.042, change24h: 12.4, whaleFlow: 2800000, retailFlow: -950000, divergence: 91, signal: 'STRONG BUY', whaleTxs: 31, retailTxs: 198, desc: 'Consistent whale accumulation over 48h. Retail capitulation creating entry.' },
+  { token: 'AERO', price: 0.332, change24h: 6.1, whaleFlow: 1900000, retailFlow: -420000, divergence: 82, signal: 'BUY', whaleTxs: 28, retailTxs: 156, desc: 'Moderate whale buying pressure. Retail showing signs of fatigue.' },
+  { token: 'ETH', price: 1628.04, change24h: -0.8, whaleFlow: 1200000, retailFlow: 680000, divergence: 38, signal: 'NEUTRAL', whaleTxs: 89, retailTxs: 4210, desc: 'Both whale and retail aligned. No significant divergence detected.' },
+  { token: 'BRETT', price: 0.0053, change24h: -4.1, whaleFlow: -890000, retailFlow: 1200000, divergence: 72, signal: 'SELL', whaleTxs: 15, retailTxs: 287, desc: 'Whales reducing positions. Retail FOMO buying into distribution.' },
+  { token: 'DEGEN', price: 0.0016, change24h: 2.3, whaleFlow: -2100000, retailFlow: 3400000, divergence: 86, signal: 'STRONG SELL', whaleTxs: 22, retailTxs: 892, desc: 'Massive retail pump while whales exit. Classic distribution pattern.' },
 ];
 
 function fmt(n) { return n >= 1e6 ? '$' + (n/1e6).toFixed(1) + 'M' : n >= 1e3 ? '$' + (n/1e3).toFixed(0) + 'K' : '$' + n; }

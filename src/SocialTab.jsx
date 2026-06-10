@@ -10,15 +10,15 @@ const ALPHA_CALLERS = [
     totalCalls: 34,
     hits: 27,
     hitRate: 79,
-    avgReturn: 4700,
-    bestCall: 'LAWB',
+    avgReturn: 3800,
+    bestCall: '$LAWB',
     bestCallReturn: 14800,
     chain: 'Base',
     recentCalls: [
-      { token: 'LAWB', calledAt: '$200K', peakedAt: '$30M', returnPct: 14800, daysToPeak: 14, status: 'hit', date: '2024-12-01' },
-      { token: 'AERO', calledAt: '$12M', peakedAt: '$89M', returnPct: 641, daysToPeak: 21, status: 'hit', date: '2024-11-15' },
-      { token: 'CLANKER', calledAt: '$800K', peakedAt: '$24M', returnPct: 2900, daysToPeak: 9, status: 'hit', date: '2024-11-28' },
-      { token: 'MFER', calledAt: '$1.2M', peakedAt: '$4.8M', returnPct: 300, daysToPeak: 5, status: 'partial', date: '2024-12-05' },
+      { token: '$LAWB', calledAt: '$200K', peakedAt: '$30M', returnPct: 14800, daysToPeak: 14, status: 'hit', date: '2024-12-01' },
+      { token: '$AERO', calledAt: '$12M', peakedAt: '$315M', returnPct: 2525, daysToPeak: 21, status: 'hit', date: '2024-11-15' },
+      { token: '$CLANKER', calledAt: '$800K', peakedAt: '$12.8M', returnPct: 1500, daysToPeak: 9, status: 'hit', date: '2024-11-28' },
+      { token: '$MFER', calledAt: '$1.2M', peakedAt: '$4.8M', returnPct: 300, daysToPeak: 5, status: 'partial', date: '2024-12-05' },
     ],
   },
   {
@@ -29,14 +29,14 @@ const ALPHA_CALLERS = [
     totalCalls: 28,
     hits: 21,
     hitRate: 75,
-    avgReturn: 3200,
-    bestCall: 'BRETT',
-    bestCallReturn: 13900,
+    avgReturn: 4100,
+    bestCall: '$BRETT',
+    bestCallReturn: 8400,
     chain: 'Base',
     recentCalls: [
-      { token: 'ALTT', calledAt: '$150K', peakedAt: '$12.7M', returnPct: 8400, daysToPeak: 11, status: 'hit', date: '2024-11-20' },
-      { token: 'BRETT', calledAt: '$3M', peakedAt: '$420M', returnPct: 13900, daysToPeak: 60, status: 'hit', date: '2024-09-15' },
-      { token: 'MORPHO', calledAt: '$2M', peakedAt: '$18M', returnPct: 800, daysToPeak: 18, status: 'hit', date: '2024-11-10' },
+      { token: '$ALTT', calledAt: '$150K', peakedAt: '$12.7M', returnPct: 8400, daysToPeak: 11, status: 'hit', date: '2024-11-20' },
+      { token: '$BRETT', calledAt: '$3M', peakedAt: '$190M', returnPct: 6233, daysToPeak: 60, status: 'hit', date: '2024-09-15' },
+      { token: '$MORPHO', calledAt: '$2M', peakedAt: '$1.3B', returnPct: 64900, daysToPeak: 18, status: 'hit', date: '2024-11-10' },
     ],
   },
   {
@@ -47,14 +47,14 @@ const ALPHA_CALLERS = [
     totalCalls: 22,
     hits: 16,
     hitRate: 72,
-    avgReturn: 2800,
-    bestCall: 'VIRTUAL',
-    bestCallReturn: 6200,
+    avgReturn: 14200,
+    bestCall: '$VIRTUAL',
+    bestCallReturn: 39900,
     chain: 'Base',
     recentCalls: [
-      { token: 'VIRTUAL', calledAt: '$4M', peakedAt: '$252M', returnPct: 6200, daysToPeak: 28, status: 'hit', date: '2024-10-20' },
-      { token: 'DEGEN', calledAt: '$8M', peakedAt: '$86M', returnPct: 975, daysToPeak: 14, status: 'hit', date: '2024-11-01' },
-      { token: 'HIGHER', calledAt: '$600K', peakedAt: '$9M', returnPct: 1400, daysToPeak: 7, status: 'hit', date: '2024-11-25' },
+      { token: '$VIRTUAL', calledAt: '$4M', peakedAt: '$1.6B', returnPct: 39900, daysToPeak: 28, status: 'hit', date: '2024-10-20' },
+      { token: '$DEGEN', calledAt: '$8M', peakedAt: '$180M', returnPct: 2150, daysToPeak: 14, status: 'hit', date: '2024-11-01' },
+      { token: '$HIGHER', calledAt: '$600K', peakedAt: '$9M', returnPct: 1400, daysToPeak: 7, status: 'hit', date: '2024-11-25' },
     ],
   },
   {
@@ -65,13 +65,13 @@ const ALPHA_CALLERS = [
     totalCalls: 12,
     hits: 10,
     hitRate: 83,
-    avgReturn: 1800,
-    bestCall: 'AERO',
-    bestCallReturn: 1680,
+    avgReturn: 6200,
+    bestCall: '$AERO',
+    bestCallReturn: 6200,
     chain: 'Base',
     recentCalls: [
-      { token: 'AERO', calledAt: '$5M', peakedAt: '$89M', returnPct: 1680, daysToPeak: 45, status: 'hit', date: '2024-09-01' },
-      { token: 'VIRTUAL', calledAt: '$12M', peakedAt: '$252M', returnPct: 2000, daysToPeak: 22, status: 'hit', date: '2024-10-15' },
+      { token: '$AERO', calledAt: '$5M', peakedAt: '$315M', returnPct: 6200, daysToPeak: 45, status: 'hit', date: '2024-09-01' },
+      { token: '$VIRTUAL', calledAt: '$12M', peakedAt: '$1.6B', returnPct: 13233, daysToPeak: 22, status: 'hit', date: '2024-10-15' },
     ],
   },
   {
@@ -83,13 +83,13 @@ const ALPHA_CALLERS = [
     hits: 31,
     hitRate: 76,
     avgReturn: 3600,
-    bestCall: 'BRETT',
-    bestCallReturn: 13900,
+    bestCall: '$BRETT',
+    bestCallReturn: 6233,
     chain: 'Base',
     recentCalls: [
-      { token: 'BRETT', calledAt: '$3M', peakedAt: '$420M', returnPct: 13900, daysToPeak: 60, status: 'hit', date: '2024-09-15' },
-      { token: 'ALTT', calledAt: '$150K', peakedAt: '$12.7M', returnPct: 8400, daysToPeak: 11, status: 'hit', date: '2024-11-20' },
-      { token: 'LAWB', calledAt: '$200K', peakedAt: '$30M', returnPct: 14800, daysToPeak: 14, status: 'hit', date: '2024-12-01' },
+      { token: '$BRETT', calledAt: '$3M', peakedAt: '$190M', returnPct: 6233, daysToPeak: 60, status: 'hit', date: '2024-09-15' },
+      { token: '$ALTT', calledAt: '$150K', peakedAt: '$12.7M', returnPct: 8400, daysToPeak: 11, status: 'hit', date: '2024-11-20' },
+      { token: '$LAWB', calledAt: '$200K', peakedAt: '$30M', returnPct: 14800, daysToPeak: 14, status: 'hit', date: '2024-12-01' },
     ],
   },
   {
@@ -101,12 +101,12 @@ const ALPHA_CALLERS = [
     hits: 13,
     hitRate: 71,
     avgReturn: 2100,
-    bestCall: 'AERO',
-    bestCallReturn: 394,
+    bestCall: '$AERO',
+    bestCallReturn: 1650,
     chain: 'Base',
     recentCalls: [
-      { token: 'AERO', calledAt: '$18M', peakedAt: '$89M', returnPct: 394, daysToPeak: 12, status: 'hit', date: '2024-11-18' },
-      { token: 'UNI', calledAt: '$6.2B', peakedAt: '$9.1B', returnPct: 47, daysToPeak: 30, status: 'partial', date: '2024-10-20' },
+      { token: '$AERO', calledAt: '$18M', peakedAt: '$315M', returnPct: 1650, daysToPeak: 12, status: 'hit', date: '2024-11-18' },
+      { token: '$UNI', calledAt: '$6.2B', peakedAt: '$9.1B', returnPct: 47, daysToPeak: 30, status: 'partial', date: '2024-10-20' },
     ],
   },
   {
@@ -118,12 +118,12 @@ const ALPHA_CALLERS = [
     hits: 11,
     hitRate: 69,
     avgReturn: 1900,
-    bestCall: 'AERO',
-    bestCallReturn: 1680,
+    bestCall: '$AERO',
+    bestCallReturn: 6200,
     chain: 'Base',
     recentCalls: [
-      { token: 'AERO', calledAt: '$5M', peakedAt: '$89M', returnPct: 1680, daysToPeak: 45, status: 'hit', date: '2024-09-01' },
-      { token: 'MORPHO', calledAt: '$4M', peakedAt: '$18M', returnPct: 350, daysToPeak: 22, status: 'hit', date: '2024-11-01' },
+      { token: '$AERO', calledAt: '$5M', peakedAt: '$315M', returnPct: 6200, daysToPeak: 45, status: 'hit', date: '2024-09-01' },
+      { token: '$MORPHO', calledAt: '$4M', peakedAt: '$1.3B', returnPct: 32400, daysToPeak: 22, status: 'hit', date: '2024-11-01' },
     ],
   },
 ];
@@ -138,15 +138,15 @@ const AVERAGE_INFLUENCERS = [
     hits: 22,
     hitRate: 49,
     avgReturn: 420,
-    bestCall: 'BRETT',
-    bestCallReturn: 340,
+    bestCall: '$BRETT',
+    bestCallReturn: 37,
     chain: 'Base',
     recentCalls: [
-      { token: 'BRETT', calledAt: '$380M', peakedAt: '$420M', returnPct: 10, daysToPeak: 3, status: 'hit', date: '2024-12-03' },
-      { token: 'AERO', calledAt: '$82M', peakedAt: '$89M', returnPct: 8, daysToPeak: 5, status: 'hit', date: '2024-12-01' },
-      { token: 'FLOKI', calledAt: '$1.2M', peakedAt: '$400K', returnPct: -67, daysToPeak: 0, status: 'miss', date: '2024-11-28' },
-      { token: 'MFER2', calledAt: '$500K', peakedAt: '$200K', returnPct: -60, daysToPeak: 0, status: 'miss', date: '2024-11-25' },
-      { token: 'DOGE2', calledAt: '$2M', peakedAt: '$800K', returnPct: -60, daysToPeak: 0, status: 'miss', date: '2024-11-20' },
+      { token: '$BRETT', calledAt: '$38M', peakedAt: '$52M', returnPct: 37, daysToPeak: 3, status: 'hit', date: '2024-12-03' },
+      { token: '$AERO', calledAt: '$82M', peakedAt: '$315M', returnPct: 284, daysToPeak: 5, status: 'hit', date: '2024-12-01' },
+      { token: '$FLOKI', calledAt: '$1.2M', peakedAt: '$400K', returnPct: -67, daysToPeak: 0, status: 'miss', date: '2024-11-28' },
+      { token: '$MFER2', calledAt: '$500K', peakedAt: '$200K', returnPct: -60, daysToPeak: 0, status: 'miss', date: '2024-11-25' },
+      { token: '$DOGE2', calledAt: '$2M', peakedAt: '$800K', returnPct: -60, daysToPeak: 0, status: 'miss', date: '2024-11-20' },
     ],
   },
   {
@@ -158,15 +158,15 @@ const AVERAGE_INFLUENCERS = [
     hits: 17,
     hitRate: 45,
     avgReturn: 280,
-    bestCall: 'DEGEN',
-    bestCallReturn: 180,
+    bestCall: '$DEGEN',
+    bestCallReturn: 329,
     chain: 'Base',
     recentCalls: [
-      { token: 'DEGEN', calledAt: '$72M', peakedAt: '$86M', returnPct: 19, daysToPeak: 4, status: 'hit', date: '2024-12-02' },
-      { token: 'CLANKER', calledAt: '$20M', peakedAt: '$24M', returnPct: 20, daysToPeak: 3, status: 'hit', date: '2024-11-30' },
-      { token: 'PEPE2', calledAt: '$800K', peakedAt: '$300K', returnPct: -63, daysToPeak: 0, status: 'miss', date: '2024-11-28' },
-      { token: 'WOJAK2', calledAt: '$1.5M', peakedAt: '$600K', returnPct: -60, daysToPeak: 0, status: 'miss', date: '2024-11-22' },
-      { token: 'TURBO2', calledAt: '$900K', peakedAt: '$350K', returnPct: -61, daysToPeak: 0, status: 'miss', date: '2024-11-18' },
+      { token: '$DEGEN', calledAt: '$42M', peakedAt: '$180M', returnPct: 329, daysToPeak: 4, status: 'hit', date: '2024-12-02' },
+      { token: '$CLANKER', calledAt: '$8M', peakedAt: '$12.8M', returnPct: 60, daysToPeak: 3, status: 'hit', date: '2024-11-30' },
+      { token: '$PEPE2', calledAt: '$800K', peakedAt: '$300K', returnPct: -63, daysToPeak: 0, status: 'miss', date: '2024-11-28' },
+      { token: '$WOJAK2', calledAt: '$1.5M', peakedAt: '$600K', returnPct: -60, daysToPeak: 0, status: 'miss', date: '2024-11-22' },
+      { token: '$TURBO2', calledAt: '$900K', peakedAt: '$350K', returnPct: -61, daysToPeak: 0, status: 'miss', date: '2024-11-18' },
     ],
   },
   {
@@ -178,13 +178,13 @@ const AVERAGE_INFLUENCERS = [
     hits: 24,
     hitRate: 46,
     avgReturn: 310,
-    bestCall: 'VIRTUAL',
-    bestCallReturn: 85,
+    bestCall: '$VIRTUAL',
+    bestCallReturn: 596,
     chain: 'Base',
     recentCalls: [
-      { token: 'VIRTUAL', calledAt: '$230M', peakedAt: '$252M', returnPct: 9, daysToPeak: 2, status: 'hit', date: '2024-12-04' },
-      { token: 'SHIB2', calledAt: '$1.8M', peakedAt: '$700K', returnPct: -61, daysToPeak: 0, status: 'miss', date: '2024-11-30' },
-      { token: 'BONK2', calledAt: '$2.1M', peakedAt: '$900K', returnPct: -57, daysToPeak: 0, status: 'miss', date: '2024-11-25' },
+      { token: '$VIRTUAL', calledAt: '$230M', peakedAt: '$1.6B', returnPct: 596, daysToPeak: 2, status: 'hit', date: '2024-12-04' },
+      { token: '$SHIB2', calledAt: '$1.8M', peakedAt: '$700K', returnPct: -61, daysToPeak: 0, status: 'miss', date: '2024-11-30' },
+      { token: '$BONK2', calledAt: '$2.1M', peakedAt: '$900K', returnPct: -57, daysToPeak: 0, status: 'miss', date: '2024-11-25' },
     ],
   },
   {
@@ -196,7 +196,7 @@ const AVERAGE_INFLUENCERS = [
     hits: 19,
     hitRate: 46,
     avgReturn: 250,
-    bestCall: 'ETH',
+    bestCall: '$ETH',
     bestCallReturn: 120,
     chain: 'Multi',
     recentCalls: [
@@ -208,14 +208,14 @@ const AVERAGE_INFLUENCERS = [
 ];
 
 const LIVE_CALLS_SEED = [
-  { account: '@GitLawb', tier: 'alpha', token: 'LAWB', action: 'buy', calledAt: '$200K', current: '$30M', returnPct: 14800, time: '14m ago' },
-  { account: '@TheTrenchByCbg', tier: 'alpha', token: 'ALTT', action: 'buy', calledAt: '$150K', current: '$12.7M', returnPct: 8400, time: '11m ago' },
-  { account: '@KaziBase', tier: 'avg', token: 'FLOKI', action: 'buy', calledAt: '$1.2M', current: '$400K', returnPct: -67, time: '9m ago' },
-  { account: '@basedalpha_', tier: 'alpha', token: 'VIRTUAL', action: 'buy', calledAt: '$4M', current: '$252M', returnPct: 6200, time: '8m ago' },
-  { account: '@ThePitchMan_base', tier: 'avg', token: 'PEPE2', action: 'buy', calledAt: '$800K', current: '$300K', returnPct: -63, time: '6m ago' },
-  { account: '@SailboatCabal', tier: 'alpha', token: 'BRETT', action: 'buy', calledAt: '$3M', current: '$420M', returnPct: 13900, time: '5m ago' },
-  { account: '@Jesse_base', tier: 'alpha', token: 'AERO', action: 'buy', calledAt: '$5M', current: '$89M', returnPct: 1680, time: '4m ago' },
-  { account: '@BaseDegen_calls', tier: 'avg', token: 'SHIB2', action: 'buy', calledAt: '$1.8M', current: '$700K', returnPct: -61, time: '3m ago' },
+  { account: '@GitLawb', tier: 'alpha', token: '$LAWB', action: 'buy', calledAt: '$200K', current: '$850K', returnPct: 325, time: '14m ago' },
+  { account: '@TheTrenchByCbg', tier: 'alpha', token: '$ALTT', action: 'buy', calledAt: '$150K', current: '$1.2M', returnPct: 700, time: '11m ago' },
+  { account: '@KaziBase', tier: 'avg', token: '$FLOKI', action: 'buy', calledAt: '$1.2M', current: '$400K', returnPct: -67, time: '9m ago' },
+  { account: '@basedalpha_', tier: 'alpha', token: '$VIRTUAL', action: 'buy', calledAt: '$4M', current: '$357M', returnPct: 8825, time: '8m ago' },
+  { account: '@ThePitchMan_base', tier: 'avg', token: '$PEPE2', action: 'buy', calledAt: '$800K', current: '$300K', returnPct: -63, time: '6m ago' },
+  { account: '@SailboatCabal', tier: 'alpha', token: '$BRETT', action: 'buy', calledAt: '$3M', current: '$52.2M', returnPct: 1640, time: '5m ago' },
+  { account: '@Jesse_base', tier: 'alpha', token: '$AERO', action: 'buy', calledAt: '$5M', current: '$315M', returnPct: 6200, time: '4m ago' },
+  { account: '@BaseDegen_calls', tier: 'avg', token: '$SHIB2', action: 'buy', calledAt: '$1.8M', current: '$700K', returnPct: -61, time: '3m ago' },
 ];
 
 function formatFollowers(n) {
@@ -251,7 +251,7 @@ export default function SocialTab() {
   useEffect(() => {
     const iv = setInterval(() => {
       const allCallers = [...ALPHA_CALLERS, ...AVERAGE_INFLUENCERS];
-      const tokens = ['AERO','VIRTUAL','BRETT','DEGEN','CLANKER','LAWB','MORPHO','HIGHER','MFER','ALTT','PEPE2','FLOKI','BONK2','SHIB2','WOJAK2'];
+      const tokens = ['$AERO','$VIRTUAL','$BRETT','$DEGEN','$CLANKER','$LAWB','$MORPHO','$HIGHER','$MFER','$ALTT','$PEPE2','$FLOKI','$BONK2','$SHIB2','$WOJAK2'];
       const caller = allCallers[Math.floor(Math.random() * allCallers.length)];
       const token = tokens[Math.floor(Math.random() * tokens.length)];
       const mcap = Math.floor(Math.random() * 50000 + 100);
